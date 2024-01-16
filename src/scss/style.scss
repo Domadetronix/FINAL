@@ -1,0 +1,23 @@
+@import 'font-styles';
+@import '_main-block';
+@import '_services-block';
+$bgColor: #24292e;
+$text: #fff;
+
+html {
+  background-color: #fff;
+  box-sizing: border-box;
+  font-weight: 400;
+}
+*, *:before, *:after {
+  font-weight: inherit;
+  font-family: 'TT Lakes';
+  box-sizing: inherit;
+  margin: 0px;
+  text-decoration: none;
+}
+body{
+  background-color: #F8F8F8;
+  max-width: 1120px;
+  margin: 0 auto;
+}
