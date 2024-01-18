@@ -1,0 +1,45 @@
+.mobile-slider{
+    height: fit-content;
+    &::after{
+        z-index: 999;
+        content: "";
+        position: absolute;
+        right: 0px;
+        top: 0;
+        width: 24px;
+        height: 100%;
+        background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.00) 100%);
+
+        @media screen and (min-width: $tablet) {
+            display: none;
+        }
+        @media screen and (min-width: $desktop) {
+            
+        }
+    }
+    &__technic-item {
+        border-radius: 6px;
+        border: 1px solid #EAEAEA;
+        background: #FFF;
+        width: 240px;
+        height: 72px;
+        background-color: white;
+        text-align: center;
+        max-width: 100%;
+        display: flex;
+        box-sizing: border-box;
+        padding: 0 16px;
+        justify-content: space-between;
+        align-items: center;
+
+        @media screen and (min-width: $tablet) {
+            width: 224px;
+        }
+        @media screen and (min-width: $desktop) {
+            width: 240px;
+        }
+        &_picture{
+        align-self: center;
+        }
+    }
+}

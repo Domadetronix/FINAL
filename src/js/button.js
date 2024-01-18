@@ -1,23 +1,21 @@
-let button = document.querySelectorAll('.expand-button');
+let button = document.querySelector('.services-block__expand-button');
+let buttonPic = button.querySelector('.expand-button__picture');
+let buttonText = button.querySelector('.expand-button__text');
 
 let condition = false;
 
-let switcher = function(){
-    if (condition == false){
-        buttonText.textContent = 'Скрыть';
-        buttonPic.style.transform = 'rotate('+180+'deg)';
-        condition = true;
-        cleaner();
+export let toggleButton = function(text, pic){
+    if (!text.classList.contains('active')){
+        text.textContent = 'Скрыть';
+        pic.style.transform = 'rotate('+180+'deg)';
+        text.classList.add('active')
     } else {
-        buttonText.textContent = 'Показать все';
-        buttonPic.style.transform = 'rotate('+0+'deg)'
-        condition = false;
-        detectWrap();
+        text.textContent = 'Показать все';
+        pic.style.transform = 'rotate('+0+'deg)'
+        text.classList.remove('active')
     }
+
 }
-
-
-
 
 let cleaner = function(){
     let items = document.querySelectorAll('.mobile-slider__item');
@@ -26,8 +24,8 @@ let cleaner = function(){
     }
 }
 
-let detectWrap = function(className) {
-    className = 'mobile-slider__item';
+let detectWrap = function() {
+    let className = 'mobile-slider__item';
     let prevItem = {};
     let currItem = {};
     let items = document.getElementsByClassName(className);
@@ -46,23 +44,19 @@ let detectWrap = function(className) {
     };
 }
 
-
 detectWrap();
 
 window.addEventListener('resize', function(){
-    if (condition == false){
+    if ( !buttonText.classList.contains('active') ){
         detectWrap();
     }
 });
 
-
-let buttonPic;
-let buttonText;
-
-for (let i = 0; i < button.length; i++){
-    buttonPic = button[i].querySelector('.expand-button__picture');
-    buttonText = button[i].querySelector('.expand-button__text');
-    button[i].addEventListener('click', function(){
-        switcher();
-    });
-}
+button.addEventListener('click', function(){
+    toggleButton(buttonText, buttonPic);
+    if ( buttonText.classList.contains('active') == true ){
+        cleaner();
+    } else {
+        detectWrap();
+    }
+});

@@ -1,8 +1,8 @@
 @import 'font-styles';
 @import '_main-block';
 @import '_services-block';
-$bgColor: #24292e;
-$text: #fff;
+@import '_technic-block';
+@import '_menu';
 
 html {
   background-color: #fff;
@@ -15,9 +15,13 @@ html {
   box-sizing: inherit;
   margin: 0px;
   text-decoration: none;
+  color: inherit;
 }
 body{
   background-color: #F8F8F8;
-  max-width: 1120px;
+  max-width: 1440px;
   margin: 0 auto;
+  font-family: $font;
+  position: relative;
+  color: $black;
 }

@@ -1,17 +1,19 @@
 
 .services-block{
-    background-color: #F8F8F8; ;
+    background-color: #F8F8F8;
+    @media screen and (min-width: $desktop) {
+        margin-left: 320px;
+    }
     &::before{
         content: "";
         position: absolute;
         width: 100%;
         height: 1px;
-        background: #D9FFF5;
+        background: $blue-block-line;
     }
    
     &__title{
-        color: #7E7E82;
-        font-family: TT Lakes;
+        color: $gray;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -22,6 +24,7 @@
         background: linear-gradient(90deg, #F8F8F8 0%, #FFF 98.61%);
     }
     &__expand-button{
+        display: none;
         margin-left: 24px;
         margin-bottom: 34px;
         @media screen and (min-width: $desktop) {
@@ -66,7 +69,7 @@
             margin: 24px 32px;            
         }
     }
-    &__item {
+    &__brand-item {
         border-radius: 6px;
         border: 1px solid #EAEAEA;
         background: #FFF;
@@ -87,33 +90,33 @@
         @media screen and (min-width: $desktop) {
             width: 240px;
         }
+        &_picture{
+        align-self: center;
+        }
     }
 }
 .item{
-    &_picture{
-        align-self: center;
-
-    }
+    
     &_arrow {
         position: relative;
         width: 40px;
         height: 40px;
-        border: 2px solid #FF3E79;
+        border: 2px solid $light-red;
         border-radius: 50%;
         &::after{
             position: absolute;
             content: "";
             width: 7px;
             height: 7px;
-            border-top: 2px solid #FF3E79;
-            border-right: 2px solid #FF3E79;
+            border-top: 2px solid $light-red;
+            border-right: 2px solid $light-red;
             display: inline-block;
             top: 50%;
             transform: translateX(-50%) translateY(-50%) rotate(45deg);
         }
     }
 }
-.swiper-pagination{
+.swiper-pagination_1, .swiper-pagination_2{
     position: relative;
     margin-top: 16px;
     margin-bottom: 38px;
@@ -126,7 +129,6 @@
 }
 
 .expand-button{
-    display: none;
     gap: 9px;
     padding: 0;
     background: none;
