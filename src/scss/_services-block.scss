@@ -90,14 +90,11 @@
         @media screen and (min-width: $desktop) {
             width: 240px;
         }
-        &_picture{
-        align-self: center;
-        }
     }
 }
 .item{
     
-    &_arrow {
+    &__arrow {
         position: relative;
         width: 40px;
         height: 40px;

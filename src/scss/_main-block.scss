@@ -7,7 +7,9 @@ $gray: #7E7E82;
 $light-red: #FF3E79;
 $blue-block-line: #D9FFF5;
 $blue: #41F6D7;
-
+.content-wrapper{
+    overflow: hidden;
+}
 header{
     margin-bottom: 24px;
 }
@@ -59,9 +61,11 @@ header{
     display: flex;
     gap: 20px;
 }
+.header__contact-block{
+    display: none;
+}
 .contact-block{
     align-items: center;
-    display: none;
     @media screen and (min-width:$tablet) {
         gap: 16px;
         display: flex;
@@ -149,7 +153,7 @@ header{
             @media screen and (min-width: $tablet) {
                 margin-right: 20px;
             }
-            @media screen and (min-width: $tablet) {
+            @media screen and (min-width: $desktop) {
                 margin-right: 30px;
             }
         }

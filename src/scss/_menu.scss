@@ -2,17 +2,16 @@ a{
     text-decoration: none;
 }
 .mobile-menu {
-    display: none;
+    z-index: 2000;
     width: 100vw;
     height: 100%;
     position: absolute;
     left: 0;
     top: 0;
-    transform: translateX(-100%);
-   
     background-color: #fff;
-    box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.20), -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
-
+    transform: translateX(-100%);
+    transition: 0.3s;
+    
     @media screen and (min-width: $tablet) {
         width: 320px;
     }
@@ -26,13 +25,26 @@ a{
         margin-bottom: 45px;
     }
 }
+.modal-active{
+        box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.20), -2px 0px 4px 0px rgba(69, 79, 126, 0.02);  
+        display: block;
+        transform: translateX(0%);
+        transition: 0.3s;
+
+}
 .menu-container{
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     max-height: 100%;
-    padding: 18px 24px 32px 24px;
+    padding: 18px 16px 24px 16px;
+    @media screen and (min-width: 360px) {
+        padding: 18px 24px 24px 24px;       
+    }
+    @media screen and (min-width:$desktop) {
+        padding: 29px 24px 35px 24px;
+    }
 }
 .desktop-menu{
     width: 320px;
@@ -86,12 +98,9 @@ a{
     margin-top: auto;
 }
 
-.contact-block {
+.mobile-menu__contact-block {
     display: flex;
     gap: 16px;
-}
-
-.mobile-contact-block {
     margin-bottom: 16px;
 }
 
@@ -178,8 +187,24 @@ a{
 }
 
 
-.mobile-tablet-button{
+.mobile-menu__close-button{
     @media screen and (min-width: $desktop) {
         display: none;        
     }
 }
+
+.modal-background{
+    display: none;
+}
+.modal-background-active{
+    @media screen and (min-width: $tablet) {
+        display: block;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1999;
+        opacity: 0.9605;
+        background: #FFF;
+        top: 0;
+        left: 0;
+    }}

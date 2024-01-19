@@ -3,6 +3,7 @@
 @import '_services-block';
 @import '_technic-block';
 @import '_menu';
+@import '_modal';
 
 html {
   background-color: #fff;
@@ -24,4 +25,5 @@ body{
   font-family: $font;
   position: relative;
   color: $black;
+  overflow-y: hidden;
 }

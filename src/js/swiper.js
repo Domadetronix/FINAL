@@ -7,7 +7,7 @@ var swiper_2;
 var pagination_2 = document.querySelector('.swiper-pagination_2');
 
 function swiperCard() {
-  if (window.innerWidth >= 320 && window.innerWidth < 768) {
+  if (window.innerWidth < 768) {
     if (!init_1) {
       init_1 = true;
       swiper_1 = new Swiper('.mobile-slider_1', {
