@@ -1,17 +1,17 @@
 @charset "UTF-8";
 @font-face {
   font-family: 'TT Lakes';
-  src: url(./fonts/TTLakes-Regular.ttf) format(TrueType);
+  src: url(../fonts/TTLakes-Regular.ttf) format(TrueType);
   font-weight: 400; }
 
 @font-face {
   font-family: 'TT Lakes';
-  src: url(./fonts/TTLakes-Medium.ttf) format(TrueType);
+  src: url(../fonts/TTLakes-Medium.ttf) format(TrueType);
   font-weight: 500; }
 
 @font-face {
   font-family: 'TT Lakes';
-  src: url(./fonts/TTLakes-Bold.ttf) format(TrueType);
+  src: url(../fonts/TTLakes-Bold.ttf) format(TrueType);
   font-weight: bold; }
 
 .content-wrapper {
@@ -574,21 +574,21 @@ a {
       background-repeat: no-repeat;
       background-position: 50% 50%; }
       .button__icon_content_close {
-        background-image: url(./static/close.svg); }
+        background-image: url(../static/close.svg); }
       .button__icon_content_search {
-        background-image: url(./static/search.svg); }
+        background-image: url(../static/search.svg); }
       .button__icon_content_phone {
-        background-image: url(./static/phone.svg); }
+        background-image: url(../static/phone.svg); }
       .button__icon_content_chat {
-        background-image: url(./static/chat.svg); }
+        background-image: url(../static/chat.svg); }
       .button__icon_content_profile {
-        background-image: url(./static/profile.svg); }
+        background-image: url(../static/profile.svg); }
       .button__icon_content_burger-menu {
-        background-image: url(./static/burger-menu.svg); }
+        background-image: url(../static/burger-menu.svg); }
       .button__icon_content_status-check {
-        background-image: url(./static/checkstatus.svg); }
+        background-image: url(../static/checkstatus.svg); }
       .button__icon_content_repair {
-        background-image: url(./static/repair.svg); }
+        background-image: url(../static/repair.svg); }
 
 .button:hover > .button__icon {
   -webkit-filter: grayscale(60%);
@@ -1023,8 +1023,7 @@ a {
 html {
   background-color: #fff;
   box-sizing: border-box;
-  font-weight: 400;
-  overflow-x: hidden; }
+  font-weight: 400; }
 
 *, *:before, *:after {
   font-weight: inherit;
