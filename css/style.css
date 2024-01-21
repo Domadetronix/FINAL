@@ -1007,6 +1007,7 @@ a {
   flex-direction: column;
   gap: 16px;
   margin: 16px;
+  margin-bottom: 20px;
   text-align: center; }
   .footer-container::before {
     content: "";
